@@ -1,6 +1,3 @@
-import array
-
-# First try solution
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -8,16 +5,9 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        something = []
-        for i, item in enumerate(nums):
-            x = target - item
-            nums[i] == item
-            if x in nums:
-                j = nums.index(x)
-                if i != j:
-                    something.append(i)
-                    something.append(j)
-                    break
-        return something
+        for i in range (len(nums)):
+            for j in range (i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
 
         
